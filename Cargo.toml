@@ -1,0 +1,18 @@
+[package]
+
+name = "select_color"
+version = "0.0.0"
+authors = [
+    "bvssvni <bvssvni@gmail.com>"
+]
+tags = []
+
+[lib]
+
+name = "select_color"
+path = "src/lib.rs"
+
+[dependencies.image]
+
+git = "https://github.com/PistonDevelopers/image"
+
