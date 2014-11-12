@@ -19,7 +19,7 @@ pub fn hue_saturation_image(
     let inv_rect_width = 1.0_f64 / rect[2] as f64;
     let half_inv_rect_height = 0.5_f64 / rect[3] as f64;
     let inv60 = 1.0_f64 / 60.0_f64;
-    for (x, y, pxl) in sub_image.mut_pixels() {
+    for (x, y, pxl) in sub_image.pixels_mut() {
         let fx = (x - rect[0]) as f64 * inv_rect_width;
         let hue = fx * 360.0_f64;
         // Saturation is 0.5 * fy, so by halving the height we save operations.
