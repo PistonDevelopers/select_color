@@ -4,6 +4,5 @@
 
 extern crate image;
 
-pub use hue_saturation_image::hue_saturation_image;
+pub mod hue_saturation;
 
-mod hue_saturation_image;
