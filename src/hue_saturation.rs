@@ -3,7 +3,7 @@
 
 use image::{
     ImageBuf,
-    MutableRefImage,
+    GenericImage,
     Rgba,
     SubImage,
 };
