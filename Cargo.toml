@@ -3,9 +3,14 @@
 name = "select_color"
 version = "0.0.0"
 authors = [
-    "bvssvni <bvssvni@gmail.com>"
+    "Sven Nilsen <bvssvni@gmail.com>"
 ]
-tags = []
+keywords = ["select", "color", "piston", "hue", "saturation", "colorpicker"]
+description = "A library for color selection"
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/pistondevelopers/select_color.git"
+homepage = "https://github.com/pistondevelopers/select_color"
 
 [lib]
 
