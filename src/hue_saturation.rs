@@ -2,9 +2,9 @@
 //! Helper functions for hue and saturation selection
 
 use image::{
-    ImageBuf,
     GenericImage,
     Rgba,
+    RgbaImage,
     SubImage,
 };
 
@@ -25,7 +25,7 @@ pub fn select(rect: [u32, ..4], x: u32, y: u32) -> Rgba<u8> {
     let p = (255.0 * (1.0 - saturation)) as u8;
     let q = (255.0 * (1.0 - f * saturation)) as u8;
     let t = (255.0 * (1.0 - (1.0 - f) * saturation)) as u8;
-    Rgba(
+    Rgba([
         match hi {
             0 | 1 => p,
             2 => t,
@@ -45,7 +45,7 @@ pub fn select(rect: [u32, ..4], x: u32, y: u32) -> Rgba<u8> {
             _ => v
         },
         255
-    )
+    ])
 }
 
 /// Sets colors to hue/saturation image.
@@ -53,7 +53,7 @@ pub fn select(rect: [u32, ..4], x: u32, y: u32) -> Rgba<u8> {
 /// This is at the top of the image,
 /// while saturated colors are at the bottom.
 pub fn fill_image(
-    image: &mut ImageBuf<Rgba<u8>>,
+    image: &mut RgbaImage,
     rect: [u32, ..4]
 ) {
     let mut sub_image = SubImage::new(image,
@@ -73,7 +73,7 @@ pub fn fill_image(
         let p = (255.0 * (1.0 - saturation)) as u8;
         let q = (255.0 * (1.0 - f * saturation)) as u8;
         let t = (255.0 * (1.0 - (1.0 - f) * saturation)) as u8;
-        *pxl = Rgba(
+        *pxl = Rgba([
             match hi {
                 0 | 1 => p,
                 2 => t,
@@ -93,6 +93,6 @@ pub fn fill_image(
                 _ => v
             },
             255
-        );
+        ]);
     }
 }
