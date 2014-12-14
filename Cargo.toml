@@ -5,7 +5,7 @@ version = "0.0.0"
 authors = [
     "Sven Nilsen <bvssvni@gmail.com>"
 ]
-keywords = ["select", "color", "piston", "hue", "saturation", "colorpicker"]
+keywords = ["select", "color", "piston"]
 description = "A library for color selection"
 license = "MIT"
 readme = "README.md"
