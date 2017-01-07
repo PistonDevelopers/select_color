@@ -2,7 +2,6 @@
 //! Helper functions for hue and saturation selection
 
 use image::{
-    GenericImage,
     Rgba,
     RgbaImage,
 };
